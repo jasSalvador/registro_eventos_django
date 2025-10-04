@@ -1,0 +1,15 @@
+<!--hereda del archivo base.html-->
+{% extends 'base.html' %} 
+{% load static %}
+
+<!-- titulo: inicio -->
+{% block title %}Inicio - Eventos{% endblock %}
+
+
+{% block content %}
+<div class="container py-5 text-center mx-auto my-5 bg-light">
+    <h1 class="fw-bold">Bienvenidos a nuestra App</h1>
+    <p class="fs-4 my-5">Un espacio seguro y comodo para regístrar todos tus eventos!</p>
+    <a href="{% url 'registro' %}" class="btn btn-info mt-5">Ir a registro de eventos</a>
+</div>
+{% endblock %}

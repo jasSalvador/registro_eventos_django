@@ -1,0 +1,34 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block title %}Registro de Eventos{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-center mx-auto">Registro de Eventos</h1>
+
+    <form method="POST" class="my-5">
+        {% csrf_token %}
+
+        <h3>Datos del evento</h3>
+        <div class="my-4 border border-1 border-secondary p-3 bg-light">
+            {{ evento_form.as_p }}
+        </div>
+
+        <h3>Datos del participante</h3>
+        <div class="my-4 border border-1 border-secondary p-3 bg-light">
+            {{ participante_form.as_p }}
+        </div>
+
+        <button type="submit" class="btn btn-success">Registrar evento</button>
+    </form>
+
+    {% if messages %}
+        <div class="mt-3">
+            {% for message in messages %}
+                <div class="alert alert-info">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
