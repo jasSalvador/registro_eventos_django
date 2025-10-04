@@ -34,5 +34,4 @@ Practicar conceptos como:
 
 ## Autores 👩‍💻👨‍💻
 
-Jasmin Salvador
-Tatu Vergara
+Jasmin Salvador - Tatu Vergara
